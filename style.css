@@ -130,7 +130,7 @@ a:hover{
 
 .board{
     border-radius: 20px;
-    background-image: url('images/board.jpg');
+    background-image: url(images/board.jpg);
     object-fit: contain;
     width: 1000px;
     height: 600px;
