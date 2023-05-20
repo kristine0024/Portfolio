@@ -139,6 +139,9 @@ a:hover{
     margin-left: 5%;
     margin-top: 3%;
 }
+.h2{
+    font-family: "Lucida Console";
+}
 .car_size{
     width: 900px;
     height: auto;
