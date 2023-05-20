@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/c4b8b00efa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Portfolio</title>
+  </head>
+
+  <body class="home">
+      <div class="first">
+          <header>
+              <div class="navbar">
+                  <div class="logo"><a href="#"><img src="images/logo.png" alt="" width="100px"></a></div>
+                  <ul class="links">
+                      <li><a href="index.html">HOME</a></li>
+                      <li><a href="portfolio.html">PORTFOLIO</a></li> 
+                      <li><a href="otherpage.html">☒</a></li>
+                  </ul>
+                  <div class="toggle_btn">
+                      <i class="fa-solid fa-bars"></i>
+                  </div>
+              </div>
+
+              <div class="dropdown_menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li> 
+                <li><a href="otherpage.html">☒</a></li>
+              </div>
+          </header>
+
+          <main class="description">
+              <section class="detail" id="detail">
+                  <h1><span>Hello!</span> My name <br>is Kristine.</h1>
+                  <p>This is my official website to show all
+                    <br> Art and Work developments
+                    <br> <span>Join me along the way</span>
+                  </p>
+              </section>
+          </main>
+
+          <!-- THIS PART S FOR THE PICTURE -->
+          <div class="images">
+             <img src="images/ting2x.gif" class="girl" width="auto" height="auto">
+          </div>
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="foot">
+        <div class="container2">
+          <div class="box2"><a href="#"><img src="images/logo.png" alt="" width="130px"></a>
+            <div class="column1">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+            </div>  
+          </div>
+          <div class="box2 column2">
+            <h4>RESOURCES</h4>
+            <br>
+            <li><a href="https://www.clipstudio.net/en/">Application</a></li>
+            <li><a href="https://ask.clip-studio.com/en-us/">Community</a></li>           
+            <li><a href="https://support.clip-studio.com/en-us/faq/articles">FAQ</a></li>
+          </div>
+          <div class="box2 column4">
+            <h4>SOCIAL</h4>
+            <br>
+            <li><a href="https://www.facebook.com/kristine.te.5">Facebook</a></li>
+            <li><a href="https://twitter.com/KTE_tin">Twitter</a></li>     
+            <li><a href="https://www.linkedin.com/in/kristine-te-2284b0222/">LinkedIn</a></li>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="last">© Copyright 2023 | TeaYokai | All Rights Reserved</div>
+      </footer>
+
+      <!-- SCRIPT -->
+      <script>
+          const toggleBtn = document.querySelector('.toggle_btn')
+          const toggleBtnIcon = document.querySelector('.toggle_btn i')
+          const dropDownMenu = document.querySelector('.dropdown_menu')
+
+          toggleBtn.onclick = function () {
+              dropDownMenu.classList.toggle('open')
+              const isOpen = dropDownMenu.classList.contains('open')
+
+              toggleBtnIcon.classList = isOpen
+              ? 'fa-solid fa-xmark'
+              : 'fa-solid fa-bars'
+          }
+      </script>
+  </body>
+
+</html>

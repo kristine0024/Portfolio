@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/c4b8b00efa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Portfolio</title>
+  </head>
+
+  <body class="other" id="other">
+      <div class="first">
+          <header>
+              <div class="navbar">
+                <div class="logo"><a href="file:///C:/Users/ting2x/Downloads/ting2x%20files/HTMLWebsite/index.html"><img src="images/logo.png" alt="" width="100px"></a></div>
+                  <ul class="links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li> 
+                    <li><a href="otherpage.html">☒</a></li>
+                  </ul>
+                  <div class="toggle_btn">
+                      <i class="fa-solid fa-bars"></i>
+                  </div>
+              </div>
+
+              <div class="dropdown_menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li> 
+                <li><a href="otherpage.html">☒</a></li>
+              </div>
+          </header>
+
+          <button class="btn" onclick="bodyImg()"></button>
+      </div>
+
+      <!-- SCRIPT -->
+      <script>
+          const toggleBtn = document.querySelector('.toggle_btn')
+          const toggleBtnIcon = document.querySelector('.toggle_btn i')
+          const dropDownMenu = document.querySelector('.dropdown_menu')
+
+          toggleBtn.onclick = function () {
+              dropDownMenu.classList.toggle('open')
+              const isOpen = dropDownMenu.classList.contains('open')
+
+              toggleBtnIcon.classList = isOpen
+              ? 'fa-solid fa-xmark'
+              : 'fa-solid fa-bars'
+          }
+
+          var isImg1 = true;
+          var isImg2 = false;
+
+          function bodyImg(){
+              if (isImg1 == true) {
+                  document.body.style.backgroundImage = "url('images/dark_bg.jpg')";
+                  //Go to img2
+                  isImg1 = false;
+                  isImg2 = true;
+              }
+              else if (isImg2 == true){
+                  document.body.style.backgroundImage = "url('images/light.jpg')";
+                  //Revert to img1
+                  isImg1 = true;
+                  isImg2 = false;
+              }
+          }
+
+      </script>
+
+  </body>
+
+</html>

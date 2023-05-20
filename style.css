@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body.home{
+    height: 100vh;
+    background: #000;
+    background-image: url('images/forest_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    cursor: url('images/arrow.png'), auto;
+}
+body.other{
+    height: 100vh;
+    background: #000;
+    background-image: url('images/light.jpg');
+    backdrop-filter: blur(20px);
+    background-size: cover;
+    background-position: center;
+    animation: image 4s forwards;
+    cursor: url('images/arrow.png'), auto;
+}
+body.port{
+    height: 100vh;
+    background: #000;
+    background-image: url('images/cabin.jpg');
+    background-size: cover;
+    background-position: center;
+    cursor: url('images/arrow.png'), auto;
+}
+
+.first{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    animation: transitionIn 1s;
+}
+/* TRANSITION KEYFRAMES */
+@keyframes transitionIn {
+    0%{
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes image {
+  0% {
+      backdrop-filter: blur(20px);
+  }
+  100% {
+      backdrop-filter: blur(0);
+  }
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+.navbar{
+    width: 100%;
+    height: 65px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+.navbar .toggle_btn {
+    color: orange;
+    font-size: 1.5rem;
+    display: none;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+a:hover{
+    color: orange;
+}
+
+/* RESPONSIVE NAVBAR DESIGN */
+@media(max-width: 992px){
+    .navbar .links{
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+/* DROPDOWNMENU */
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.dropdown_menu.open{
+    height: 180px;
+}
+
+.board{
+    border-radius: 20px;
+    background-image: url('images/board.jpg');
+    object-fit: contain;
+    width: 1000px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+.car_size{
+    width: 900px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-top: 7%;
+}
+.carousel-control-prev-icon {
+    background-image: url(images/arrow.png);
+}
+.carousel-control-next-icon {
+    background-image: url(images/arrow.png);
+}
+
+.detail{
+    display: flex;
+    flex-direction: column;
+    margin-left: 8%;
+    margin-top: 10%;
+}
+.detail h1{
+    font-size:50px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.detail p{
+    color: #fff;
+    line-height: 22px;
+}
+span{
+    color: orange;
+}
+
+
+
+/* for the images part */
+.images{
+    width: 20%;
+    height: 70%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+.images img{
+    height: auto;
+    width: 700px;
+    position: absolute;
+    left: 50px;
+    bottom: 0;
+    transform: translateX(-80%);
+    transition: bottom 1s, left 1s;
+}
+.images:hover .girl{
+    left: 45%;
+}
+
+
+.images2{
+    width: 20%;
+    height: 70%;
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+}
+.images2 img{
+    height: 700px;
+    width: auto;
+    position: absolute;
+    left: 200px;
+    bottom: 0;
+    transform: translateX(-80%);
+}
+/* end of images */
+
+/* Buttons */
+.btn {
+       border: 1px transparent;
+       border-radius: 50%;
+       background-color: transparent;
+       height: 65px;
+       width: 50px;
+       display: flex;
+       margin-left: 49.5%;
+       margin-top: 17%;
+   }
+
+/*Footer*/
+.container2{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.box2 {
+    width: 300px;
+    border: #fff;
+    display: flex;
+    display:inline-block;
+    color: #fff;
+    margin-top: 30px;
+}
+.column1{
+    margin-left: 15px;
+}
+.foot{
+    height: 330px;
+    background: #1f1f1f;
+}
+.line{
+    background: #fff;
+    height: 1px;
+    width: 90%;
+    margin: 2rem auto;
+}
+.last{
+    color: #fff;
+    text-align: center;
+}
