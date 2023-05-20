@@ -139,10 +139,14 @@ a:hover{
     margin-left: 5%;
     margin-top: 3%;
 }
-.h2{
-    font-weight: bold;
+.board h2{
+    font-size:50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     color:#fff;
-    font-family: "Lucida Console";
+    font-family: "Papyrus";
+    margin-top: 1.5%;
 }
 .car_size{
     width: 900px;
@@ -150,7 +154,6 @@ a:hover{
     display: flex;
     flex-direction: column;
     margin-left: 5%;
-    margin-top: 7%;
 }
 .carousel-control-prev-icon {
     background-image: url(images/prev.png);
@@ -178,7 +181,17 @@ a:hover{
 span{
     color: orange;
 }
-
+.say{
+    display: flex;
+    flex-direction: column;
+    margin-left: 8%;
+    margin-top: 10%;
+    color: #fff;
+}
+.say p{
+    font-family: "Papyrus";
+    font-size:20px;
+}
 
 
 /* for the images part */
